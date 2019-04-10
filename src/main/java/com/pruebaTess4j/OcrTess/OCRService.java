@@ -42,6 +42,10 @@ public class OCRService {
 		
 		String base645 = cropImage(file, 96, 408, 300, 40);
 		String base646 = cropImage(file, 493, 400, 260, 40);
+		
+		String base647 = cropImage(file, 582, 143, 140, 50);
+		String base648 = cropImage(file, 544, 263, 150, 60);
+
 
 		
 		ITesseract it = new Tesseract();
@@ -55,6 +59,8 @@ public class OCRService {
 			ocrRes += "\nCaja4 :: "  + it.doOCR(base64ToFile(base644));
 			ocrRes += "\nCajaPrueba :: "  + it.doOCR(base64ToFile(base645));
 			ocrRes += "\nCajaPrueba1 :: "  + it.doOCR(base64ToFile(base646));
+			ocrRes += "\nCaja 5 :: "  + it.doOCR(base64ToFile(base647));
+			ocrRes += "\nCaja 6 :: "  + it.doOCR(base64ToFile(base648));
 
 		} catch (TesseractException e) {
 			// TODO Auto-generated catch block
